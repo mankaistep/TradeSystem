@@ -71,12 +71,12 @@
         <dependency>
             <groupId>com.github.CodingAir</groupId>
             <artifactId>CodingAPI</artifactId>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.github.CodingAir</groupId>
             <artifactId>PacketManagement</artifactId>
-            <scope>provided</scope>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.ess3</groupId>

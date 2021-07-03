@@ -16,6 +16,7 @@ import de.codingair.tradesystem.spigot.trade.listeners.AntiGUIDupeListener;
 import de.codingair.tradesystem.spigot.trade.managers.InvitationManager;
 import de.codingair.tradesystem.spigot.utils.InputGUI;
 import de.codingair.tradesystem.spigot.utils.Lang;
+import mk.plugin.santory.item.Items;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -374,10 +375,16 @@ public class TradeHandler {
         return blacklist;
     }
 
+    /*
+    SantoryCore addon
+     */
     public boolean isBlocked(ItemStack item) {
         for (BlockedItem blocked : this.blacklist) {
             if (blocked.matches(item)) return true;
         }
+
+        // SantoryCore
+        if (Items.is(item)) return true;
 
         return false;
     }
